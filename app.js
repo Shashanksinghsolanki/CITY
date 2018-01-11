@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-
+var port =process.env.PORT  |3000;
 app.set("view engine","ejs");
 app.use(express.static(__dirname+'/public'));
 
@@ -22,4 +22,4 @@ app.get("/bad",(req,res) => {
 //app.get("/help",(req,res) => {
 //    res.render("app.html");
 //});
-app.listen("3000",()=>{console.log("listening the port 3000")});
+app.listen(port,()=>{console.log(`listening the port ${port}`)});
